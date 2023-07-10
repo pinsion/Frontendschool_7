@@ -1,0 +1,70 @@
+body,
+h1,
+h2,
+p {
+    margin: 0;
+}
+
+h1,
+h2 {
+    font: inherit;
+}
+
+a {
+    color: inherit;
+}
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+.box{
+    width: 288px;
+    box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    font-family: 'Pretendard';
+}
+.box img{
+    width: 100%;
+    /* 가로 세로 비율 맞추기 */
+    aspect-ratio: 288/196;
+    object-fit: cover;
+    border-radius: 8px 8px 0 0;
+}
+.box .content{
+    position: relative; 
+    padding: 24px 16px 16px ;
+}
+
+.box h2{
+    font-weight: bold;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    margin-bottom: 16px;
+    font-size: 16px;
+}
+
+.box .content p{
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    margin-bottom: 16px;
+    font-size: 14px;
+    line-height: 1.6;
+    height: calc(12 * 1.6 * 2);
+}
+.box .content a p{
+    font-weight: bold;
+    font-size: 14px ;
+}
+.box .content .arr{
+    display: inline;
+}
+.box .content .icons{
+    position: absolute;
+    right: 10px;
+    bottom: 7px;
+}
