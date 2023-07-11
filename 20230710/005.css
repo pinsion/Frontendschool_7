@@ -56,7 +56,7 @@ a {
     line-height: 1.6;
     height: calc(12 * 1.6 * 2);
 }
-.box .content a p{
+.box .content .read{
     font-weight: bold;
     font-size: 14px ;
 }

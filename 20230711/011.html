@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        header {
+            background-color: skyblue;
+            height: 100px;
+        }
+
+        section {
+            background-color: salmon;
+            height: 300px;
+            width: 80%;
+            display: flex;
+        }
+
+        aside {
+            background-color: gold;
+            height: 300px;
+            width: 20%;
+        }
+
+        footer {
+            background-color: slateblue;
+            height: 100px;
+        }
+        .container{
+            display: flex;
+            /* align-items: center; */
+            /* flex-wrap: wrap; */
+        }
+        /* section,
+        aside{
+            flex-basis: 0;
+        }
+        section{
+            flex-grow: 3;
+        }
+        aside{
+            flex-grow: 1; 
+        }*/
+        section {
+        flex-basis: 300px;
+        flex-grow: 3;
+    }
+
+        aside {
+        flex-basis: 300px;
+        flex-shrink: 0;
+
+    }
+    </style>
+</head>
+<body>
+    <div class="a1">
+        <header>header</header>
+        <div class="container">
+            <section>section Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatem nisi expedita aliquam sunt amet! Ad, repellendus molestiae quis nisi aliquid deleniti, voluptas labore sint ea facilis natus nam accusantium rem?</section>
+            <aside>aside Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum quia quod iste, nobis consequatur exercitationem ex quasi minima repellendus voluptatem sunt dolor natus! Aut cum ipsum perferendis ratione in ipsa.</aside>
+        </div>
+        <footer>footer</footer>
+    </div>
+</body>
+</html>

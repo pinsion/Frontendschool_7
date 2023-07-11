@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>float</title>
+    <style>
+        .container{
+            background-color: skyblue;
+        }
+        .box{
+            width: 200px;
+            height: 200px;
+            text-align: center;
+            line-height: 200px;
+        }
+        .box1{
+            background-color: blueviolet;
+        }
+        .box2{
+            background-color: pink;
+        }
+        .box3{
+            background-color: bisque;
+        }
+        .box1, .box2{
+            float: left;
+        }
+        .box3{
+            clear: left;
+            position: relative;
+            z-index: 10;
+        }
+        h2,
+        p{
+            margin: 0;
+        }
+
+        .layout img{
+            border-radius: 50%;
+            float: left;
+            margin-right: 20px;
+        }
+        .layout h2{
+            padding-top: 35px;
+        }
+        .clear-fix::after{
+            content: '';
+            display: block;
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        container
+        <div class="box box1">A</div>
+        <div class="box box2">B</div>
+        <div class="box box3">C</div>
+    </div> 
+
+    <div class="layout clear-fix">
+    <!-- before -->
+    <img src="http://placehold.it/100x100" alt="">
+    <h2>lorem ipsuj doolj</h2>
+    <p>ipsum dolo</p>
+    <!-- after -->
+    </div>
+    <p>
+    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat, voluptas, asperiores officiis saepe voluptatum maiores enim tempore ullam, nobis commodi quasi nulla optio aperiam fugit quae tenetur ducimus incidunt maxime.
+    </p>
+</body>
+</html>
