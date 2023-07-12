@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex</title>
+    <style>
+        div{
+            /* flex- direction: row(왼쪽에서 오른쪽), colum(위에서 아래)*/
+            display: flex;
+            /* 주축(가로) */
+            justify-content: center;
+            /* 교차축{세로} */
+            align-items: center;
+            background-color: eee;
+        }
+        p{
+            background-color: skyblue;
+            width: 100px;
+            height: 100px;
+            /* flex-basis: 0; */
+        }
+        .item1{
+            flex-grow: 2;
+        }
+        .item1{
+            /* flex-grow: 1; */
+            background-color: aliceblue;
+        }
+        .item1{
+            flex-grow: 2;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div>
+        <p class="item1">d안녕하세요</p>
+        <p class="item2">반갑습니다</p>
+        <p class="item3">7기 여러분</p>
+    </div>
+</body>
+</html>
