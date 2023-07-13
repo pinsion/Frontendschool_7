@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>버튼만들기</title>
+    <style>
+        button{
+            width: 457px;
+            height: 48px;
+            background-color: rgba(45, 56, 72, 1);
+        }
+        .btn{
+            color:rgba(203, 213, 223, 1) ;
+        }
+        .btn:hover{
+            text-decoration: underline;     
+            color: white;
+            background-color: rgba(45, 56, 72, 1);
+            border: 2px solid rgba(45, 56, 72, 1)  ;
+        }
+        .btn:active{
+            box-shadow: inset 3px 3px 0 0 rgba(38, 47, 62, 1);
+        }
+        .yes{
+            color:rgba(67, 154, 255, 1);
+        }
+        .yes:hover{
+            color: white;
+            text-decoration: underline;
+            background-color: rgba(67, 154, 255, 1) ;
+            border: 2px solid rgba(67, 154, 255, 1)  ;
+        }
+        .yes:active{
+            box-shadow: inset 3px 3px 0 0 rgb(0, 79, 110) ;
+        }
+        .del{
+            color: rgba(235, 87, 87, 1);
+        }
+        .del:hover{
+            color: white;
+            text-decoration: underline;
+            background-color: rgba(235, 87, 87, 1);
+            border: 3px solid rgba(235, 87, 87, 1);
+        }
+        .del:active{
+            box-shadow: inset 3px 3px 0 0 rgba(217, 66, 66, 1) ;   
+        }
+    </style>
+</head>
+<body>
+    <button class="btn" type="button">Button</button>
+    <button class="yes" type="button">Yes</button>
+    <button class="del" type="button">Del</button>
+</body>
+</html>
