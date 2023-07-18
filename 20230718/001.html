@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animation-licat</title>
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+            animation: change 2s 1s infinite;
+        }
+        @keyframes change {
+            from{
+                scale: 0;
+                background-color: gold;
+            }
+            to{
+                scale: 1.2;
+                background-color: seagreen;
+            }
+        }
+
+        .licat{
+            width: 168px;
+            height: 200px;
+            /* no-repear: 반복하지 않고 position:0 0 width:auto height:100% */
+            /* background: url(./img/keyframes-licat.png) no-repeat 0 0 / auto 100%; */
+            background-image: url(./img/keyframes-licat.png);
+            background-repeat: no-repeat;
+            background-position: left top;
+            background-size: auto 100%;
+
+            /* step 6번 나워서 끊어서 나온다*/
+            /* animation: move-licat 0.8s infinite steps(6); */
+            animation-name: move-licat;
+            animation-duration: 0.8s;
+            animation-iteration-count: infinite;
+            animation-timing-function: steps(6);
+            /* animation-delay: 3s; */
+            animation-direction: reverse;    
+        }
+        /* licat캐릭터를  hover했을때 멈춤 */
+        .licat:hover{
+            animation-play-state: paused;
+        }
+        /* keyframes 이름 지정은 아무거나 가능! */
+        @keyframes move-licat {
+            /* 0%{
+                background-position: 0;
+            }
+            50%{
+                background-position: 0;
+            } */
+            100%{
+                /* 위치를 맨 끝으로 바꾸는 position:(100% , right) 할수있다 */
+                background-position: right 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box">box</div>
+    <div class="licat"></div>
+</body>
+</html>
