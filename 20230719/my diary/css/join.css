@@ -1,0 +1,76 @@
+
+h1,
+h2,
+p{
+    margin:0;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+body{
+    width: 100%;
+    background-color: #fffaf0;
+}
+header{
+    display: flex;
+    background-color: white;
+    justify-content:space-between ;
+    height: 75px;
+    padding: 20px 0;
+}
+header h1 img{
+    width: 156px;
+    height: 75px;
+}
+header .login-icon{
+    background-image:url();
+    color: #5A6A72;
+    text-align: center;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 75px;
+    padding: 4px 20px 4px 10px;
+}
+main{
+    width: 50%;
+    height: auto;
+    margin: 0 auto;
+}
+
+main h2{
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 40px;
+}
+label,
+input{
+    display: block;
+    border: none;
+    width: 392px;
+    height: 48px;
+    margin-bottom: 40px;
+    border-bottom: 1px solid #677880;
+}
+form p{
+    margin-bottom: 5px;
+    font-size: 14px;
+        text-align: left;
+}
+form button{
+    width: 392px;
+    height: 48px;
+    background-color: #29363d;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-weight: bold;
+    margin-top:24px;
+}
+footer{
+    text-align: center;
+    margin: 50px 0;
+    color: #677880;
+    font-size: 12px;
+}

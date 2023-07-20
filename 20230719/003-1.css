@@ -1,0 +1,86 @@
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-family: 'Pretendard';
+}
+/* reset */
+body {
+    margin: 0;
+    font-family:'Pretendard-Regular' ;
+}
+
+h1 {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    /* 텍스트를 정렬하려면 */
+    vertical-align: top;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+/* content */
+main{
+    width: 600px;
+    margin:auto;
+    padding: 0 30px;
+    display: grid;
+    grid-template-areas: 
+    "a b"
+    "a c";
+    gap: 20px;
+}
+.con-a{
+    width: 350px;
+    font-size:30px ;
+    grid-area: a;
+}
+.con-a p{
+    font-size: 10px;
+}
+.box{
+    color: white;
+    width: 243px;
+    height: 140px;
+    border-radius: 20px;
+    padding: 15px 0 0 15px;
+    position: relative;
+}
+.box .photo-text{
+    font-size: 15px;
+}
+.box .go-icon{
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
+    font-size: 9px;
+}
+.con-b{
+    background-image: url(img/Rectangle\ 2.png);
+    grid-area: b;
+}
+.con-c {
+    background-image: url(img/Rectangle\ 3.png);
+    grid-area: c;
+}
+@media (min-width:401px) and (max-width:599px) {
+    main {
+        grid-template-areas:
+            "a a"
+            "b c";
+    }
+}
+@media(max-width:400px) {
+    main {
+        grid-template-areas:
+            "a"
+            "b"
+            "c";
+    }
+}
