@@ -1,0 +1,24 @@
+.wrapper{
+    margin: 100px auto;
+    text-align: center;
+}
+
+.fruit {
+    background-color: pink;
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+    line-height: 200px;
+    border-radius: 50%;
+    color: white;
+    text-decoration: none;
+}
+.lemon{
+    background-color: yellow;
+}
+.orange{
+    background-color: orange;
+}
+.jamong{
+    background-color: orangered;
+}
