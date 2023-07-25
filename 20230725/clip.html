@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        img{
+            /* clip을 사용할때 position:absolute를 꼭 같이 사용해줘야 한다 */
+            position: absolute;
+            /* clip: rect(0, 100px, 100px, 0); */
+            /* clip-path는 , 를 붙이면 안된다 */
+            clip-path: inset(0 0 0 0);
+        }
+    </style>
+</head>
+<body>
+    <img src="./images/card-img1.png" alt="">
+</body>
+</html>

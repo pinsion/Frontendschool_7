@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>input 디자인</title>
+    <style>
+        .txt-hide{
+            overflow: hidden;
+            width: 1px;
+            height: 1px;
+            /* 경로에 따라서 50% 자르다 */
+            clip-path: inset(50%);
+        }
+        .labl-hold{
+            position: relative;
+        }
+        /* 가상요소는 인라인속성을 가지고 있다 그래서 display:inline-block을 적어준다*/
+        .labl-hold::before{
+            display: inline-block;
+            /* 가상요소에는 content를 꼭 써야한다 */
+            content: '';
+            width: 22px;
+            height: 22px;
+            margin-right: 10px;
+            border: 1px solid black;
+            vertical-align: -5px;
+        }
+        /* 키보드로 focus 하려면 focus-visible */
+        .inpHold:focus-visible+.labl-hold::before{
+            outline: 2px solid teal;
+            /* outline을 공간을 만드는 정도 */
+            outline-offset: 3px;
+        }
+
+        .labl-hold::after{
+            content: '';
+            /* display값을 안넣어주고 position:absolute를 줘도 display가 block이 된다! */
+            position: absolute;
+            top: 0;
+            left: 22px;
+            width: 22px;
+            height: 22px;
+            background: url(images/checkmark.png) 0 0 / 22px no-repeat;
+            /* background-image: url(images/checkmark.png);
+            background-size: 22px;
+            background-repeat: no-repeat; */
+            opacity: 0;
+            transition: all 0.3s;
+        }
+        /* + 는 인접형제를 선택할때 */
+        /* :checked는 가상클래스 선택자 / : 는 요소상태에 따른 선택 */
+        .inpHold:checked+.labl-hold::after{
+            left: 1px;
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <input id="inpHold" type="checkbox" class="txt-hide inpHold">
+    <label for="inpHold" class="labl-hold">로그인 상태 유지</label>
+</body>
+</html>

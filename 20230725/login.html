@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <link rel="stylesheet" href="reset.css">
+    <style>
+        body {
+            font-family: 'SpoqaHanSansNeo-Regular';
+        }
+
+        .section {
+            width: 520px;
+            border-radius: 10px;
+            border: 1px solid #C4C4C4;
+            background: #FFF;
+        }
+
+        /* 헤더 */
+        .header {
+            padding: 20px 0;
+            border-bottom: 1px solid #C4C4C4;
+            text-align: center;
+            position: relative;
+        }
+
+        .header h1 {
+            font-weight: 500;
+            font-size: 16px;
+        }
+
+        .header .exit-btn {
+            width: 16px;
+            height: 16px;
+            border: none;
+            background: url(images/close.svg) no-repeat 0 0 / 16px 16px;
+            margin-bottom: 5px;
+            position: absolute;
+            top: 20px;
+            right: 24px;
+        }
+
+        /* 메인 */
+        .main {
+            padding: 26px 20px;
+        }
+
+        .main h2 {
+            font-size: 20px;
+            font-weight: 500;
+            margin-bottom: 20px;
+            font-weight: bold;
+            margin-bottom: 24px;
+        }
+
+        .main {
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* 아이디 비밀번호 */
+        .id input,
+        .pw input {
+            width: 472px;
+            height: 50px;
+            border-radius: 5px;
+            border: 1px solid #C4C4C4;
+            background: #FFF;
+            padding-left: 10px;
+        }
+
+        .id input::placeholder,
+        .pw input::placeholder {
+            font-size: 16px;
+            color: #767676;
+            font-weight: bold;
+        }
+
+        .pw {
+            margin-top: 15 px;
+        }
+
+        .input {
+            color: #F4492E;
+            font-size: 14px;
+            font-weight: 400;
+            margin: 10px 0 0 4px;
+        }
+
+        .login-input:hover {
+            border: 2px solid #f4492e;
+        }
+
+        /* 로그인 상태 유지 */
+        .hold-box {
+            margin-top: 13px;
+        }
+
+        .txt-hide {
+            overflow: hidden;
+            width: 1px;
+            height: 1px;
+            clip-path: inset(50%);
+        }
+
+        .chk-hold {
+            font-size: 16px;
+            font-weight: 500;
+            color: #767676;
+            position: relative;
+        }
+
+        .chk-hold::before {
+            content: '';
+            display: inline-block;
+            width: 22px;
+            height: 22px;
+            background: url(images-login/check-box.svg) no-repeat 0 0 / 22px 22px;
+            margin-right: 8px;
+            vertical-align: -5px;
+        }
+
+        .chk:checked+.chk-hold:after {
+            content: '';
+            display: inline-block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 22px;
+            height: 22px;
+            background: url(images-login/check-box-hold.svg) no-repeat 0 0 / 22px 22px;
+            margin-right: 8px;
+            vertical-align: -5px;
+        }
+
+        .chk-on {
+            font-size: 16px;
+            font-weight: 500;
+            color: #767676;
+            margin-left: 8px;
+        }
+
+        /* 로그인 버튼 */
+        .login-btn {
+            width: 472px;
+            height: 50px;
+            border-radius: 5px;
+            background: #2F80ED;
+            border: none;
+            color: white;
+            font-size: 18px;
+            font-weight: 700;
+            margin-top: 20px;
+        }
+
+        /* 회원가입 | 아이디/비밀번호찾기 */
+        .membership {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .membership a {
+            font-size: 14px;
+            color: #767676;
+        }
+
+        .member::after {
+            content: "|";
+            margin: 0 12px;
+        }
+
+        /* 또는 */
+        .or {
+            font-size: 14px;
+            font-weight: 400;
+            color: #767676;
+            text-align: center;
+            margin: 30px 0 20px 0;
+        }
+
+        .or::after {
+            content: " ";
+            display: inline-block;
+            width: 210px;
+            height: 1px;
+            background-color: #c4c4c4;
+            margin: 0 0 5px 13px;
+        }
+
+        .or::before {
+            content: " ";
+            display: inline-block;
+            width: 210px;
+            height: 1px;
+            background-color: #c4c4c4;
+            margin: 0 13px 5px 0;
+        }
+
+        /* sns 로그인 */
+        .sns-btn a {
+            display: inline-block;
+            width: 472px;
+            height: 50px;
+            border-radius: 5px;
+            text-align: center;
+            line-height: 50px;
+            font-size: 16px;
+            font-weight: 500;
+            color: #767676;
+        }
+
+        .sns-btn a~a {
+            margin-top: 10px;
+        }
+
+        .google-btn {
+            border: 1px solid #767676;
+            background: url(images-login/Google__G__Logo\ 1.svg) no-repeat left 12px center / 28px 28px;
+        }
+
+        .fb-btn {
+            border: 1px solid #2D9CDB;
+            background: url(images-login/facebook.svg) no-repeat left 12px center / 28px 28px;
+        }
+
+        .naver-btn {
+            border: 1px solid #00BF18;
+            background: url(images-login/naver-logo.svg) no-repeat left 12px center / 28px 28px;
+        }
+
+        .kakao-btn {
+            border: 1px solid #F2C94C;
+            background: url(images-login/message-circle.svg) no-repeat left 12px center / 28px 28px;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="section">
+        <header class="header">
+            <h1>로그인 또는 회원가입</h1>
+            <button class="exit-btn"></button>
+        </header>
+        <main class="main">
+            <h2>위니브에서 여러분의 궁금증을 해결하세요! :) </h2>
+            <div class="id">
+                <label for="login-id"></label>
+                <input id="login-id" type="text" placeholder="아이디" class="login-input">
+            </div>
+            <p class="input">아이디를 입력해주세요.</p>
+            <div class="pw">
+                <label for="login-pw"></label>
+                <input id="login-pw" type="text" placeholder="비밀번호" class="login-input">
+            </div>
+            <p class="input">아이디 혹은 비밀번호가 일치하지 않습니다.</p>
+            <div class="hold-box">
+                <input id="chk-box" type="checkbox" class="chk txt-hide">
+                <label for="chk-box" class="chk-hold">로그인 상태 유지</label>
+            </div>
+            <button class="login-btn">로그인</button>
+            <div class="membership">
+                <a class="member" href=" #">회원가입</a>
+                <a href=" #">아이디 / 비밀번호 찾기</a>
+            </div>
+            <p class="or">또는</p>
+            <div class="sns-btn">
+                <a class="google-btn" href="#">구글 계정으로 로그인</a>
+                <a class="fb-btn" href="#">페이스북 계정으로 로그인</a>
+                <a class="naver-btn" href="#">네이버 계정으로 로그인</a>
+                <a class="kakao-btn" href="#">카카오톡 계정으로 로그인</a>
+            </div>
+        </main>
+    </section>
+</body>
+
+</html>
