@@ -69,6 +69,9 @@ main{
 }
 /* 749px 부터 적용하겠다 */
 @media (min-width:749px){
+    .logo{
+        max-width: 50%;
+    }
     main{
         grid-template-areas:
         'section1 section2'

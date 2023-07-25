@@ -1,0 +1,244 @@
+/* reset */
+body,
+ul,
+li,
+h1,
+h2,
+h3,
+p {
+    padding: 0;
+    margin: 0;
+}
+
+img {
+    vertical-align: top;
+}
+
+h1,
+h2,
+h3 {
+    font: inherit;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    font: inherit;
+    border: 0;
+    background: none;
+}
+
+button:enabled {
+    cursor: pointer;
+}
+
+ul,
+li {
+    list-style: none;
+}
+.a11y-hidden {
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+}
+
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+}
+.section{
+    width:1000px;
+    margin: 0 auto;
+    border: 2px solid #bdbdbd;
+    border-radius: 10px;
+    padding: 30px;
+    background-color: #f2f2f2;
+}
+/* header */
+.header {
+    width:650px;
+    text-align: center;
+    margin: 0 auto;
+}
+.header h1{
+    padding:10px 0 37px ;      
+    border-bottom: 2px solid #bdbdbd;
+    font-weight: bold;
+    font-size: 24px;
+}
+.header ul{
+    padding: 28px 0;
+}
+.header ul li ~ li{
+    margin-left: 60px;
+}
+.header ul li{
+    display: inline-block;
+}
+.header ul li:hover{
+    font-weight: 600;
+}
+/* main */
+.main{
+    width: 930px;
+    padding: 28px 27px;
+    border: 2px solid #bdbdbd;
+    border-radius: 10px;
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.main .cinema-card{
+    width:220px;
+    border-radius: 10px;
+    border: 1px solid #BDBDBD;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.30);
+    text-align: center;
+}
+.cinema-inner{
+    padding: 19px 20px;
+}
+.cinema-inner img{
+    width: 100%;
+    aspect-ratio: 180/250;
+    object-fit: cover;
+
+    border-radius: 10px;
+    border: 1px solid #BDBDBD;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.cinema-inner h3{
+    font-size: 16px;
+    font-weight: bold;
+    margin: 11px 0;
+
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.cinema-inner ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    font-size: 13px;
+    font-weight: 400;
+}
+.cinema-inner ul li{
+    margin-bottom: 5px;
+}
+.type{
+    color:  #828282;
+}
+.star{
+    padding-left: 16px;
+    background: url(../img/icon-star.svg) no-repeat center left / 14px 14px;
+}
+.btn-group {
+    display: flex;
+    border-top: 1px solid #bdbdbd;
+}
+
+.btn-go,
+.btn-view {
+    background-color: #f2f2f2;
+    width: 100%;
+    font-size: 14px;
+    height: 41px;
+    padding-bottom: 2px;
+    box-sizing: border-box;
+}
+
+.btn-go {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0 0 0 10px;
+    border-right: 1px solid #bdbdbd;
+}
+
+.btn-go:focus-visible {
+    z-index: 1;
+}
+
+.btn-view {
+    border-radius: 0 0 10px 0;
+}
+
+.btn-view::before {
+    content: '';
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+
+    background-image: url(../img/icon-play.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    vertical-align: middle;
+    margin: -2px 2px 0 -0.4em;
+}
+.footer{
+    text-align: center;
+    background-color: #f2f2f2;
+}
+.company,
+.adress{
+    display: flex;
+    justify-content: space-between;
+}
+.company{
+    padding:53px 0;
+    border-bottom: 1px solid #bdbdbd;
+}
+.company h2{
+    font-size: 22px;
+    font-weight: bold;
+}
+.sns{
+    display: flex;
+}
+.sns li{
+    width: 24px;
+    height: 24px;
+    padding: 5px;
+}
+.twitter{
+    background: url(../img/icon-twitter.svg) no-repeat center center / 24px 24px;
+}
+.instagram{
+    background: url(../img/icon-instagram.svg) no-repeat center center / 24px 24px;
+}
+.facebook{
+    background: url(../img/icon-facebook.svg) no-repeat center center / 24px 24px;
+}
+.adress{
+    padding:38px 0;
+}
+.adress ul li{
+    display: inline-block;
+    font-size: 10px;
+    margin-right: 5px;
+    padding-left: 7px;
+    color: #4f4f4f;
+}
+.adress ul li ~ li{
+    content: '';
+    height: 10px;
+    border-left:1px solid #828282;
+    line-height: 10px;
+}
+.adress ul li strong{
+    margin-right: 5px; 
+}
+.copyright{
+    font-size: 10px;
+    color: #4f4f4f ;
+}
