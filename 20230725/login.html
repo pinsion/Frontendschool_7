@@ -116,7 +116,7 @@
             vertical-align: -5px;
         }
 
-        .chk:checked+.chk-hold:after {
+        .chk:checked+.chk-hold::after {
             content: '';
             display: inline-block;
             position: absolute;
@@ -232,32 +232,40 @@
         </header>
         <main class="main">
             <h2>위니브에서 여러분의 궁금증을 해결하세요! :) </h2>
+
             <div class="id">
                 <label for="login-id"></label>
                 <input id="login-id" type="text" placeholder="아이디" class="login-input">
             </div>
             <p class="input-txt">아이디를 입력해주세요.</p>
+
             <div class="pw">
                 <label for="login-pw"></label>
                 <input id="login-pw" type="text" placeholder="비밀번호" class="login-input">
             </div>
             <p class="input-txt">아이디 혹은 비밀번호가 일치하지 않습니다.</p>
+
             <div class="hold-box">
                 <input id="chk-box" type="checkbox" class="chk txt-hide">
                 <label for="chk-box" class="chk-hold">로그인 상태 유지</label>
             </div>
+
             <button class="login-btn">로그인</button>
+
             <div class="membership">
                 <a class="member" href=" #">회원가입</a>
                 <a href=" #">아이디 / 비밀번호 찾기</a>
             </div>
+
             <p class="or">또는</p>
+
             <div class="sns-btn">
                 <a class="google-btn" href="#">구글 계정으로 로그인</a>
                 <a class="fb-btn" href="#">페이스북 계정으로 로그인</a>
                 <a class="naver-btn" href="#">네이버 계정으로 로그인</a>
                 <a class="kakao-btn" href="#">카카오톡 계정으로 로그인</a>
             </div>
+
         </main>
     </section>
 </body>
